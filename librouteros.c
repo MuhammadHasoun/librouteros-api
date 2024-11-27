@@ -815,19 +815,19 @@ int ros_login(struct ros_connection *conn, char *username, char *password) {
 		fprintf(stderr, "Error logging in. No challenge received\n");
 		exit(1);
 	}
-	md5toBin(buffer + 1, challenge);
+	//md5toBin(buffer + 1, challenge);
 
-	md5_init(&state);
-	md5_append(&state, buffer, 1);
-	md5_append(&state, (unsigned char *)password, strlen(password));
-	md5_append(&state, buffer + 1, 16);
-	md5_finish(&state, (md5_byte_t *)md5sum);
+	//md5_init(&state);
+	//md5_append(&state, buffer, 1);
+	//md5_append(&state, (unsigned char *)password, strlen(password));
+	//md5_append(&state, buffer + 1, 16);
+	//md5_finish(&state, (md5_byte_t *)md5sum);
 	ros_result_free(res);
 
-	strcpy((char *)buffer, "00");
-	bintomd5((char *)buffer + 2, (unsigned char *)md5sum);
-
-	strcpy(passWord, "=response=");
+	//strcpy((char *)buffer, "00");
+	//bintomd5((char *)buffer + 2, (unsigned char *)md5sum);
+	strcpy(passWord, "=password=");
+	strcpy(passWord,password);
 	strcat(passWord, (char *)buffer);
 	passWord[44] = '\0';
 
