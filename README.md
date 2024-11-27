@@ -15,6 +15,7 @@ How to compile
 sudo apt install gcc g++
 
 gcc -o test test.c -lrouteros
+
 ./test
 
 librouteros-api
