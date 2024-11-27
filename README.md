@@ -10,7 +10,11 @@ cd librouteros-api
 
 make
 
+How to compile
+===============
+sudo apt install gcc g++
 
+gcc -o test test.c -lrouteros
 
 librouteros-api
 ===============
