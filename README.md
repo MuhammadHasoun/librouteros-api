@@ -8,6 +8,9 @@ git clone https://github.com/MuhammadHasoun/librouteros-api.git
 
 cd librouteros-api
 
+make
+
+
 
 librouteros-api
 ===============
