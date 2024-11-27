@@ -1,3 +1,11 @@
+Installation on linux
+===============
+mkdir librouteros
+cd librouteros
+git clone https://github.com/MuhammadHasoun/librouteros-api.git
+cd librouteros-api
+
+
 librouteros-api
 ===============
 
